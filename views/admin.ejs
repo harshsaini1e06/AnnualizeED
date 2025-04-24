@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Management System</h1>
+
+        <div id="menu">
+            <button onclick="showMenu('resultMenu')">Result Menu</button>
+            <button onclick="showMenu('entryMenu')">Entry/Edit Menu</button>
+            <a href="/student2"><button >Report Entry</button></a>
+        </div>
+
+        <!-- Existing Result Menu Block -->
+        <div id="resultMenu" class="menu-section">
+            <h2>Result Menu</h2>
+            <button onclick="displayAllStudents()">Class Result</button>
+            <input type="number" id="searchRollNo" placeholder="Enter Roll Number">
+            <button onclick="displayStudent()">View Report Card</button>
+            <button onclick="hideMenus()">Back to Main Menu</button>
+        </div>
+
+        <!-- Existing Entry/Edit Menu Block -->
+        <div id="entryMenu" class="menu-section">
+            <h2>Entry/Edit Menu</h2>
+            <form id="studentForm">
+                <input type="number" id="rollno" placeholder="Roll Number" required>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="number" id="p_marks" placeholder="Physics Marks" required>
+                <input type="number" id="c_marks" placeholder="Chemistry Marks" required>
+                <input type="number" id="m_marks" placeholder="Math Marks" required>
+                <input type="number" id="e_marks" placeholder="English Marks" required>
+                <input type="number" id="cs_marks" placeholder="Computer Science Marks" required>
+                <button type="button" onclick="addOrUpdateStudent()">Add/Update Student</button>
+            </form>
+            <button onclick="displayAllStudents()">Display All Students</button>
+            <input type="number" id="deleteRollNo" placeholder="Enter Roll Number to Delete">
+            <button onclick="deleteStudent()">Delete Student</button>
+            <button onclick="hideMenus()">Back to Main Menu</button>
+        </div>
+
+        <!-- New Extra-Curricular Activities Menu Block -->
+        <div id="activityMenu" class="menu-section">
+            <h2>Extra-Curricular Activities</h2>
+            <form id="activityForm">
+                <input type="text" id="activityName" placeholder="Activity Name" required>
+                <input type="text" id="participationLevel" placeholder="Participation Level" required>
+                <button type="button" onclick="addOrUpdateActivity()">Add/Update Activity</button>
+            </form>
+            <button onclick="displayAllActivities()">Display All Activities</button>
+            <button onclick="hideMenus()">Back to Main Menu</button>
+        </div>
+
+        <div id="output">
+            <h3>Output</h3>
+            <div id="outputContent"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<main id="main" class="site-main create_account" style="padding: 40px 20px; background-color: #f5f7fa; font-family: 'Arial', sans-serif;">
+    <article style="max-width: 1200px; margin: 0 auto;">
+        <div class="entry-content">
+            <div class="create_account-content" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+
+                <!-- For Companies Section (Left) -->
+                <div style="background-color: #fff; border-radius: 12px; padding: 30px; width: 48%; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; text-align: center; flex-grow: 1;">
+                    <h2 style="font-size: 1.6rem; color: #333; font-weight: bold; margin-bottom: 20px;">
+                        <strong>Admin</strong>
+                    </h2>
+                    <p style="font-size: 1rem; color: #555; margin-bottom: 20px; line-height: 1.6;">
+                        To insert or edit the data of the students.
+                    </p>
+                    <p>
+                        <a href="/login" class="hr_button" style="display: inline-block; padding: 15px 30px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+                            Login
+                        </a>
+                    </p>
+                    <!-- <div class="create_account-bottom" style="font-size: 0.95rem; color: #888; margin-top: 20px;">
+                        Don't have an account? <br>
+                        <a href="/contact-sales/" style="color: #007bff; text-decoration: none;">Contact sales</a> or 
+                        <a href="/get-started/hire/" style="color: #007bff; text-decoration: none;">Get free trial</a>.
+                    </div> -->
+                </div>
+
+                <!-- For Developers Section (Right) -->
+                <div style="background-color: #fff; border-radius: 12px; padding: 30px; width: 48%; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; text-align: center; flex-grow: 1;">
+                    <h2 style="font-size: 1.6rem; color: #333; font-weight: bold; margin-bottom: 20px;">
+                        <strong>Student</strong>
+                    </h2>
+                    <p style="font-size: 1rem; color: #555; margin-bottom: 20px; line-height: 1.6;">
+                        To generate or view the report about yourself.
+                    </p>
+                    <p>
+                        <a href="/student" class="hr_button" style="display: inline-block; padding: 15px 30px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+                            View Report Card
+                        </a>
+                    </p>
+                    <!-- <div class="create_account-bottom" style="font-size: 0.95rem; color: #888; margin-top: 20px;">
+                        Don't have an account? <br>
+                        <a href="/signup/" style="color: #007bff; text-decoration: none;">Sign up</a>.
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </article>
+</main>
+
+<script>
+    // Add hover effect on login buttons
+    const buttons = document.querySelectorAll('.hr_button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = '#218838'; // Darken the green button on hover
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = '#28a745'; // Revert back to original color
+        });
+    });
+</script>

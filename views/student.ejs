@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Institution Annual Report</title>
+    <link rel="stylesheet" href="s2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="reportSection">
+        <h2>Annual Report</h2>
+
+        <section>
+            <h3>Student Enrollment Numbers</h3>
+            <canvas id="enrollmentChart"></canvas>
+        </section>
+
+        <section>
+            <h3>Graduation Rates</h3>
+            <canvas id="graduationChart"></canvas>
+        </section>
+
+        <section>
+            <h3>Academic Performance</h3>
+            <canvas id="academicPerformanceChart"></canvas>
+        </section>
+
+        <section>
+            <h3>Financial Statements</h3>
+            <canvas id="financialChart"></canvas>
+        </section>
+    </div>
+
+    <script>
+        // Get data passed from the server
+        const reportData = <%- JSON.stringify(reportData) %>;
+
+        // Chart data
+        const enrollmentData = [
+            parseInt(reportData.enrollmentYear1),
+            parseInt(reportData.enrollmentYear2),
+            parseInt(reportData.enrollmentYear3)
+        ];
+
+        const gradRateData = [
+            parseInt(reportData.gradRateYear1),
+            parseInt(reportData.gradRateYear2),
+            parseInt(reportData.gradRateYear3)
+        ];
+
+        const gpaData = [
+            parseFloat(reportData.gpaYear1),
+            parseFloat(reportData.gpaYear2),
+            parseFloat(reportData.gpaYear3)
+        ];
+
+        const financialData = [
+            parseInt(reportData.revenue),
+            parseInt(reportData.expenses),
+            parseInt(reportData.scholarships),
+            parseInt(reportData.researchFunding),
+            parseInt(reportData.campusMaintenance)
+        ];
+
+        // Initialize charts using the same code as in script1.js
+        new Chart(document.getElementById('enrollmentChart'), {
+            type: 'line',
+            data: {
+                labels: ["Year 1", "Year 2", "Year 3"],
+                datasets: [{
+                    label: 'Enrollment Numbers',
+                    data: enrollmentData,
+                    borderColor: '#4CAF50',
+                    fill: false,
+                }]
+            },
+            options: { responsive: true, plugins: { title: { display: true, text: 'Student Enrollment Numbers' } } }
+        });
+
+        new Chart(document.getElementById('graduationChart'), {
+            type: 'bar',
+            data: {
+                labels: ["Year 1", "Year 2", "Year 3"],
+                datasets: [{ label: 'Graduation Rates (%)', data: gradRateData, backgroundColor: '#2196F3' }]
+            },
+            options: { responsive: true, plugins: { title: { display: true, text: 'Graduation Rates' } } }
+        });
+
+        new Chart(document.getElementById('academicPerformanceChart'), {
+            type: 'bar',
+            data: {
+                labels: ["Year 1", "Year 2", "Year 3"],
+                datasets: [{ label: 'Average GPA', data: gpaData, backgroundColor: '#FF9800' }]
+            },
+            options: { responsive: true, plugins: { title: { display: true, text: 'Academic Performance (Average GPA)' } } }
+        });
+
+        new Chart(document.getElementById('financialChart'), {
+            type: 'pie',
+            data: {
+                labels: ["Total Revenue", "Total Expenses", "Scholarships", "Research Funding", "Campus Maintenance"],
+                datasets: [{ label: 'Financial Data', data: financialData, backgroundColor: ['#4CAF50', '#2196F3', '#FF9800', '#9C27B0', '#FF5722'] }]
+            },
+            options: { responsive: true, plugins: { title: { display: true, text: 'Financial Statements' } } }
+        });
+    </script>
+</body>
+</html>

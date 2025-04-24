@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - Automated Annual Report Preparation Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Add Bootstrap Icons CDN -->
+  <style>
+    /* Inline CSS for Navbar */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .navbar-logo img {
+      max-height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .navbar-links a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .signup-btn {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 4px;
+    }
+
+    .signup-btn:hover {
+      background-color: #e04343;
+    }
+
+    /* Mobile Menu Styles */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 10px 0;
+      font-size: 1rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Responsive Styles for Mobile */
+    @media (max-width: 768px) {
+      .navbar-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .navbar {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main-about mainpage">
+    <!-- Navigation -->
+    <div id="nav-bar">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img id="picc1" src="/images/pic1.png" alt="Logo">
+          <span>AnnualizeED</span>
+        </div>
+        
+        <div class="navbar-links">
+          <a href="/home">Home</a>
+          <a href="/about">About</a>
+          <a href="/feature">Features</a>
+          <a href="/contact">Contact</a>
+          <!-- <a href="/signup" class="signup-btn"><b>Sign Up</b></a> -->
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="btn btn-light d-md-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/feature">Features</a>
+      <a href="/contact">Contact</a>
+      <!-- <a href="/signup" class="signup-btn"><b>Sign Up</b></a> -->
+    </div>
+  </div>
+
+        
+  <!-- Features Section -->
+  <section class="features-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">About us</h2>
+        <p class="section-description">At our Automated Annual Report Preparation Portal, we offer a suite of advanced features that simplify the annual reporting process for educational institutes.</p>
+      </div>
+      <div class="row text-center">
+        <!-- Feature 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="feature-card p-4 shadow-sm">
+            <div class="feature-icon mb-3">
+              <i  class="bi bi-clipboard" style="font-size: 2rem; color: #ff4d4d;"></i>
+            </div>
+            <h5 class="feature-title">Why Choose Us?</h5>
+            <p class="feature-text">Our Automated Annual Report Preparation Portal streamlines the report creation process for educational institutions, saving time and reducing errors. With customizable templates, secure data storage, and role-based access, we make it easy to compile, edit, and finalize reports. Our user-friendly interface and automated reminders keep you on track, ensuring a polished, professional report every year with minimal effort. Choose us for a reliable, efficient solution tailored to meet your reporting needs.</p>
+           
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="feature-card p-4 shadow-sm">
+            <div class="feature-icon mb-3">
+              <i id="circle" class="bi bi-file-earmark-text" style="font-size: 2rem; color: #ff4d4d;"></i>
+            </div>
+            <h5 class="feature-title">Explore Our Services</h5>
+            <p class="feature-text">Our Automated Annual Report Preparation Portal is use to simplify the reporting process for educational institutions. From data collection to report generation, secure storage, and easy data input forms that save time and enhance accuracy. With automated reminders, real-time previews, and flexible editing options, our portal ensures a smooth experience for creating polished, comprehensive reports. Explore a solution designed to streamline your work, letting you focus on what matters most—education..</p>
+            
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="feature-card p-4 shadow-sm">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-gear" style="font-size: 2rem; color: #ff4d4d;"></i>
+            </div>
+            <h5 class="feature-title">Key Features</h5>
+            <p class="feature-text">Our Automated Annual Report Preparation Portal offers essential features to make report creation fast and efficient. It includes role-based access, secure data storage, and an easy-to-use dashboard for tracking progress. Data input forms allow seamless collection of student achievements, faculty activities, and financial information.  The portal also supports document uploads and generates insightful charts for a comprehensive, professional report. These features help educational institutes produce polished reports with minimal effort</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      <!-- footer code is here -->
+      <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    
+                       
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>8209949921</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>shivam2005sharma16@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="/home"> AnnualizeED</a>
+                            </div>
+                            <div class="footer-text">
+                                <p>The Automated Annual Report Preparation Portal is a
+                                  comprehensive platform designed to streamline your reporting process.
+                                  Transforms data into engaging, high-quality reports with ease.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; , All Right Reserved <a>AnnualizeED</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="about.js"></script>
+</body>
+</html>

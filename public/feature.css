@@ -1,0 +1,116 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header, section {
+    margin-bottom: 30px;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005f99;
+}
+
+/* Section Styles */
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.feature-item {
+    flex: 1 1 calc(50% - 10px);
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.dashboard-item {
+    flex-basis: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feature-list {
+        flex-direction: column;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-item {
+        margin-bottom: 20px;
+    }
+}

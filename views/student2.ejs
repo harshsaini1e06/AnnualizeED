@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Institution Annual Report Generator</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Annual Report</h1>
+        
+        <!-- Form to Collect Data -->
+        <form id="reportForm" method="post" action="/student2">
+            <h2>Enter Data for the Report</h2>
+
+            <!-- Student Enrollment Numbers -->
+            <fieldset>
+                <legend>Student Enrollment Numbers</legend>
+                <label>Year 1 Enrollment: <input type="number" name="enrollmentYear1" required></label>
+                <label>Year 2 Enrollment: <input type="number" name="enrollmentYear2" required></label>
+                <label>Year 3 Enrollment: <input type="number" name="enrollmentYear3" required></label>
+            </fieldset>
+
+            <!-- Graduation Rates -->
+            <fieldset>
+                <legend>Graduation Rates (%)</legend>
+                <label>Year 1 Graduation Rate: <input type="number" name="gradRateYear1" required></label>
+                <label>Year 2 Graduation Rate: <input type="number" name="gradRateYear2" required></label>
+                <label>Year 3 Graduation Rate: <input type="number" name="gradRateYear3" required></label>
+            </fieldset>
+
+            <!-- Academic Performance Data -->
+            <fieldset>
+                <legend>Academic Performance</legend>
+                <label>Year 1 Average GPA: <input type="number" step="0.1" name="gpaYear1" required></label>
+                <label>Year 2 Average GPA: <input type="number" step="0.1" name="gpaYear2" required></label>
+                <label>Year 3 Average GPA: <input type="number" step="0.1" name="gpaYear3" required></label>
+            </fieldset>
+
+            <!-- Financial Data -->
+            <fieldset>
+                <legend>Financial Data (in Thousands)</legend>
+                <label>Total Revenue: <input type="number" name="revenue" required></label>
+                <label>Total Expenses: <input type="number" name="expenses" required></label>
+                <label>Scholarships & Financial Aid: <input type="number" name="scholarships" required></label>
+                <label>Research Funding: <input type="number" name="researchFunding" required></label>
+                <label>Campus Maintenance: <input type="number" name="campusMaintenance" required></label>
+            </fieldset>
+
+            <button type="submit" >Generate Report</button>
+        </form>
+
+        <!-- Section for Displaying Charts -->
+        <!-- <div id="reportSection" style="display: none;">
+            <h2>Annual Report</h2>
+
+            <section>
+                <h3>Student Enrollment Numbers</h3>
+                <canvas id="enrollmentChart"></canvas>
+            </section>
+
+            <section>
+                <h3>Graduation Rates</h3>
+                <canvas id="graduationChart"></canvas>
+            </section>
+
+            <section>
+                <h3>Academic Performance</h3>
+                <canvas id="academicPerformanceChart"></canvas>
+            </section>
+
+            <section>
+                <h3>Financial Statements</h3>
+                <canvas id="financialChart"></canvas>
+            </section>
+        </div>
+    </div> -->
+
+    <script src="script1.js"></script>
+</body>
+</html>
